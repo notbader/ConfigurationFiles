@@ -47,27 +47,19 @@ function go_home() {
 function edit_profile() {
    vim $PROFILE
 }
+# Prompt settings
+
+$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $false
+$GITPromptSettings.DefaultPromptPath = '' 
+$GITPromptSettings.DefaultPromptSuffix = '$('' >'' * ($nestedPromptLevel + 1))'
+
+
 function prompt {
 
-    # Your non-prompt logic here
     $prompt = write-prompt '[' -NoNewline
     $prompt = Write-Prompt (Get-Date -UFormat '%T') -ForegroundColor ([ConsoleColor]::Blue) -NoNewline
     $prompt += write-prompt ']: ' -NoNewline
     $prompt = write-prompt (Split-Path (Get-Location) -Leaf) -ForegroundColor ([ConsoleColor]::Red) -NoNewline
-   # $prompt = write-prompt ' > ' -ForegroundColor ([ConsoleColor]::yellow) -NoNewline
     $prompt += & $GitPromptScriptBlock 
     if ($prompt) { "$prompt " } else { " " }
 }
-
-# function prompt {
-# Write-Host '[' -NoNewline
-# Write-Host (Get-Date -UFormat '%T') -ForegroundColor Blue -NoNewline
-# Write-Host ']: ' -NoNewline
-# Write-Host (Split-Path (Get-Location) -Leaf) -ForegroundColor Red -NoNewline # your current directory (only name of directory)
-# Write-host ' >' -Foregroundcolor yello -NoNewline
-
- 
-# &$GitPromptScriptBlock
-# return " " 
-
-# }

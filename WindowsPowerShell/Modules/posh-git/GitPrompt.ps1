@@ -104,12 +104,12 @@ $global:GitPromptSettings = [pscustomobject]@{
     EnableWindowTitle                           = 'posh~git ~ '
     AdminTitlePrefixText                        = 'Administrator: '
 
-   # DefaultPromptPrefix                         = ''
-    DefaultPromptSuffix                         = '$('' >'' * ($nestedPromptLevel + 1))'
+    DefaultPromptPrefix                         = ''
+    DefaultPromptSuffix                         = '$(''>'' * ($nestedPromptLevel + 1)) '
     DefaultPromptDebugSuffix                    = ' [DBG]$(''>'' * ($nestedPromptLevel + 1)) '
     DefaultPromptEnableTiming                   = $false
 
-    # DefaultPromptPath                           = '$(Get-PromptPath)'
+    DefaultPromptPath                           ='$(Get-PromptPath)'
     DefaultPromptAbbreviateHomeDirectory        = $true
 
     Debug                                       = $false
