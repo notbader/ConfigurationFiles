@@ -1,0 +1,27 @@
+[winUpdater]
+	recentlySeenVersion = 2.20.1.windows.1
+[user]
+	email = bdrjalmal@gmail.com
+	name = notBader
+[core]
+	editor = vim
+
+
+[color]
+    ui = true
+[color "status"]
+    changed = cyan bold
+    untracked = yellow bold
+    added = green bold
+    branch = cyan bold
+    unmerged = red bold
+[color "diff"]
+    frag = cyan
+    new = green bold
+    commit = yellow
+    old = red white
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green bold
+remote = red bold

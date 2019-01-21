@@ -1,0 +1,1 @@
+C:/users/bdrja/OneDrive/Reference/config_files/Microsoft.PowerShell_profile.ps1
