@@ -25,3 +25,5 @@
     local = yellow
     remote = green bold
 remote = red bold
+[gui]
+	recentrepo = C:/Users/bdrja/Documents/configuration_files
