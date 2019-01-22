@@ -27,7 +27,7 @@ $global:GitPromptSettings = [pscustomobject]@{
     LocalDefaultStatusBackgroundColor           = $null
 
     LocalWorkingStatusSymbol                    = '!'
-    LocalWorkingStatusForegroundColor           = [ConsoleColor]::DarkRed
+    LocalWorkingStatusForegroundColor           = [ConsoleColor]::Red
     LocalWorkingStatusForegroundBrightColor     = [ConsoleColor]::Red
     LocalWorkingStatusBackgroundColor           = $null
 
@@ -68,7 +68,7 @@ $global:GitPromptSettings = [pscustomobject]@{
     IndexForegroundBrightColor                  = [ConsoleColor]::Green
     IndexBackgroundColor                        = $null
 
-    WorkingForegroundColor                      = [ConsoleColor]::DarkRed
+    WorkingForegroundColor                      = [ConsoleColor]::Red
     WorkingForegroundBrightColor                = [ConsoleColor]::Red
     WorkingBackgroundColor                      = $null
 
@@ -109,8 +109,8 @@ $global:GitPromptSettings = [pscustomobject]@{
     DefaultPromptDebugSuffix                    = ' [DBG]$(''>'' * ($nestedPromptLevel + 1)) '
     DefaultPromptEnableTiming                   = $false
 
-    DefaultPromptPath                           = '$(Get-PromptPath)'
-    DefaultPromptAbbreviateHomeDirectory        = $false
+    DefaultPromptPath                           ='$(Get-PromptPath)'
+    DefaultPromptAbbreviateHomeDirectory        = $true
 
     Debug                                       = $false
 
